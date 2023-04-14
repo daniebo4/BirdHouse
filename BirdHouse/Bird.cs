@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-namespace BirdHouse
-{    
-    enum Species { American, European, Australian }
-    enum AmericanSubSpcies { North, Center, South }
-    enum EuropeanSubSpcies { West, East }
-    enum AustralianSubSpcies { Center, Beach }
+﻿namespace BirdHouse
+{
+    public enum Species { American, European, Australian }
+    public enum AmericanSubSpecies { North, Center, South }
+    public enum EuropeanSubSpecies { West, East }
+    public enum AustralianSubSpecies { Center, Beach }
 
 
     internal class Bird
@@ -34,6 +27,54 @@ namespace BirdHouse
             this.cageNum = cageNum;
             this.fatherSerial = fatherSerial;
             this.motherSerial = motherSerial;
+        }
+
+        public int Serial
+        {
+            get { return serial; }
+            set { serial = value; }
+        }
+
+        public Species Specie
+        {
+            get { return specie; }
+            set { specie = value; }
+        }
+
+        public object SubSpecies
+        {
+            get { return subSpecies; }
+            set { subSpecies = value; }
+        }
+
+        public DateTime HatchDate
+        {
+            get { return hatchDate; }
+            set { hatchDate = value; }
+        }
+
+        public string Gender
+        {
+            get { return gender; }
+            set { gender = value; }
+        }
+
+        public string CageNum
+        {
+            get { return cageNum; }
+            set { cageNum = value; }
+        }
+
+        public int FatherSerial
+        {
+            get { return fatherSerial; }
+            set { fatherSerial = value; }
+        }
+
+        public int MotherSerial
+        {
+            get { return motherSerial; }
+            set { motherSerial = value; }
         }
 
     }
