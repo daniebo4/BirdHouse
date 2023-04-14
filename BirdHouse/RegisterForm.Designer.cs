@@ -107,6 +107,7 @@
             button1.TabIndex = 12;
             button1.Text = "Confirm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -117,7 +118,7 @@
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -131,7 +132,7 @@
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "Form2";
+            Name = "RegisterForm";
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();

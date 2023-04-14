@@ -97,8 +97,9 @@
             Register.TabIndex = 6;
             Register.Text = "Register";
             Register.UseVisualStyleBackColor = true;
+            Register.Click += Register_Click;
             // 
-            // Form1
+            // LogInForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -110,7 +111,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(LogIn);
-            Name = "Form1";
+            Name = "LogInForm";
             Text = "Log In";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
