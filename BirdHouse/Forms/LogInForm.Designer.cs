@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            LogIn = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            LogInButton = new Button();
+            passwordBox = new TextBox();
+            userNameBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            Register = new Button();
+            registerButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // LogIn
+            // LogInButton
             // 
-            LogIn.Location = new Point(314, 282);
-            LogIn.Name = "LogIn";
-            LogIn.Size = new Size(112, 35);
-            LogIn.TabIndex = 0;
-            LogIn.Text = "Log In";
-            LogIn.UseVisualStyleBackColor = true;
+            LogInButton.Location = new Point(314, 282);
+            LogInButton.Name = "LogInButton";
+            LogInButton.Size = new Size(112, 35);
+            LogInButton.TabIndex = 0;
+            LogInButton.Text = "Log In";
+            LogInButton.UseVisualStyleBackColor = true;
+            LogInButton.Click += LogInButton_Click;
             // 
-            // textBox1
+            // passwordBox
             // 
-            textBox1.Location = new Point(314, 245);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 31);
-            textBox1.TabIndex = 1;
+            passwordBox.Location = new Point(314, 245);
+            passwordBox.Name = "passwordBox";
+            passwordBox.Size = new Size(236, 31);
+            passwordBox.TabIndex = 1;
             // 
-            // textBox2
+            // userNameBox
             // 
-            textBox2.Location = new Point(314, 208);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(236, 31);
-            textBox2.TabIndex = 2;
+            userNameBox.Location = new Point(314, 208);
+            userNameBox.Name = "userNameBox";
+            userNameBox.Size = new Size(236, 31);
+            userNameBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -69,7 +70,6 @@
             label1.Size = new Size(108, 25);
             label1.TabIndex = 3;
             label1.Text = "User Name :";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -79,7 +79,6 @@
             label2.Size = new Size(101, 25);
             label2.TabIndex = 4;
             label2.Text = "Password : ";
-            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
@@ -89,30 +88,31 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // Register
+            // registerButton
             // 
-            Register.Location = new Point(432, 282);
-            Register.Name = "Register";
-            Register.Size = new Size(112, 35);
-            Register.TabIndex = 6;
-            Register.Text = "Register";
-            Register.UseVisualStyleBackColor = true;
-            Register.Click += Register_Click;
+            registerButton.Location = new Point(432, 282);
+            registerButton.Name = "registerButton";
+            registerButton.Size = new Size(112, 35);
+            registerButton.TabIndex = 6;
+            registerButton.Text = "Register";
+            registerButton.UseVisualStyleBackColor = true;
+            registerButton.Click += registerButton_Click;
             // 
             // LogInForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(867, 334);
-            Controls.Add(Register);
+            Controls.Add(registerButton);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(LogIn);
+            Controls.Add(userNameBox);
+            Controls.Add(passwordBox);
+            Controls.Add(LogInButton);
             Name = "LogInForm";
             Text = "Log In";
+            Load += LogInForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -120,12 +120,12 @@
 
         #endregion
 
-        private Button LogIn;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button LogInButton;
+        private TextBox passwordBox;
+        private TextBox userNameBox;
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
-        private Button Register;
+        private Button registerButton;
     }
 }

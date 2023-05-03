@@ -30,12 +30,12 @@
         {
             label2 = new Label();
             label1 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            userNameBox = new TextBox();
+            passwordBox = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            idBox = new TextBox();
             label4 = new Label();
-            button1 = new Button();
+            confirm = new Button();
             button2 = new Button();
             SuspendLayout();
             // 
@@ -57,19 +57,20 @@
             label1.TabIndex = 7;
             label1.Text = "User Name :";
             // 
-            // textBox2
+            // userNameBox
             // 
-            textBox2.Location = new Point(122, 62);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(236, 31);
-            textBox2.TabIndex = 6;
+            userNameBox.Location = new Point(122, 62);
+            userNameBox.Name = "userNameBox";
+            userNameBox.Size = new Size(236, 31);
+            userNameBox.TabIndex = 6;
+            userNameBox.TextChanged += textBox2_TextChanged;
             // 
-            // textBox1
+            // passwordBox
             // 
-            textBox1.Location = new Point(122, 99);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 31);
-            textBox1.TabIndex = 5;
+            passwordBox.Location = new Point(122, 99);
+            passwordBox.Name = "passwordBox";
+            passwordBox.Size = new Size(236, 31);
+            passwordBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -81,13 +82,13 @@
             label3.Text = "ID : ";
             label3.Click += label3_Click;
             // 
-            // textBox3
+            // idBox
             // 
-            textBox3.Location = new Point(122, 139);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(236, 31);
-            textBox3.TabIndex = 9;
-            textBox3.TextChanged += textBox3_TextChanged;
+            idBox.Location = new Point(122, 139);
+            idBox.Name = "idBox";
+            idBox.Size = new Size(236, 31);
+            idBox.TabIndex = 9;
+            idBox.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
@@ -99,15 +100,15 @@
             label4.Text = "Register";
             label4.Click += label4_Click;
             // 
-            // button1
+            // confirm
             // 
-            button1.Location = new Point(122, 176);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 12;
-            button1.Text = "Confirm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            confirm.Location = new Point(122, 176);
+            confirm.Name = "confirm";
+            confirm.Size = new Size(112, 34);
+            confirm.TabIndex = 12;
+            confirm.Text = "Confirm";
+            confirm.UseVisualStyleBackColor = true;
+            confirm.Click += confirmButton_Click;
             // 
             // button2
             // 
@@ -124,16 +125,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(434, 240);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(confirm);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(idBox);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(userNameBox);
+            Controls.Add(passwordBox);
             Name = "RegisterForm";
             Text = "Register";
+            Load += RegisterForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -142,12 +144,12 @@
 
         private Label label2;
         private Label label1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox userNameBox;
+        private TextBox passwordBox;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox idBox;
         private Label label4;
-        private Button button1;
+        private Button confirm;
         private Button button2;
     }
 }
