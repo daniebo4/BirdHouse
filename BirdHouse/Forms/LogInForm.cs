@@ -58,6 +58,7 @@ namespace BirdHouse
         {
             RegisterForm registerForm = new RegisterForm(_excelService);
             registerForm.Show();
+            
         }
 
         private void LogInForm_FormClosing(object? sender, FormClosingEventArgs e)
