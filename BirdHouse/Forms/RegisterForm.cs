@@ -30,7 +30,6 @@ namespace BirdHouse
         {
             string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string filePath = projectPath + "\\users.xls";
-
             try
             {
                 _workbook = _excelService.OpenWorkbook(filePath);
@@ -39,12 +38,92 @@ namespace BirdHouse
                 string? username = userNameBox.Text;
                 string? password = passwordBox.Text;
                 string? id = idBox.Text;
+                //char[] specialChars = { '#', '$', '%', '^', '&', '*', '@', '!','|',')','(','?','.','>'  };
+                //bool containsCharacter = password.Contains(targetCharacter);
+                int counter = 0;
                 // add input check
-
+                if (username.Length<6 || username.Length > 8)
+                {
+                    MessageBox.Show("Invalide username length! \nneed to be between 6 to 8 digits!");
+                    return;
+                }
                 int lastRow = worksheet.UsedRange.Rows.Count + 1;
 
-                // if input check passed , we can save the data to the file 
-                worksheet.Cells[lastRow, 1] = idBox.Text;
+                for (int i = 0; i < username.Length-1; i++) {
+                    if (username[i] >='0' && username[i] <= '9') {
+                        counter++;
+                    }
+                    if(!(username[i] >= 'a' && username[i] <= 'z' || username[i] >= 'A' && username[i] <= 'Z' || username[i] >= '0' && username[i] <= '9')){
+                        MessageBox.Show("Invalide username! \nJust english letter are allow and numbers!");
+                        return;
+                    }
+                    if (counter > 2)
+                    {
+                        MessageBox.Show("Invalide username! \nneed to containe at most 2 numbers!");
+                        return;
+                    }
+                }
+                if (password.Length >= 8 && password.Length <= 10)
+                {
+                    bool specialFlag = false;
+                    bool numberFlag = false;
+                    bool charFlag = false;
+                    foreach (char c in password)
+                    {
+                        
+                        if (char.IsSymbol(c) || char.IsPunctuation(c))
+                            specialFlag=true;
+                           
+                        if(char.IsNumber(c))
+                            numberFlag = true;
+
+                        if (char.IsLetter(c))
+                            charFlag = true;
+
+                    } 
+                    if (specialFlag ==false)
+                    {
+                        MessageBox.Show("Invalide password! \nneed to containe at least 1 special character!");
+                        return;
+                    }
+                    if (numberFlag ==false)
+                    {
+                        MessageBox.Show("Invalide password! \nneed to containe at least 1 number!");
+                        return;
+                    }
+                    if(charFlag ==false)
+                    {
+                        MessageBox.Show("Invalide password! \nneed to containe at least 1 letter!");
+                        return;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalide password length! \nneed to be between 8 to 10 digits!");
+                    return;
+                }
+
+                if (id.Length > 0)
+                {
+                    foreach (char c in id)
+                    {
+
+                        if (!(char.IsNumber(c)))
+                        {
+                            MessageBox.Show("Invalide ID! \njust numbers allowed!");
+                            return;
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalide ID field is empty!");
+                    return;
+                }
+                    // if input check passed , we can save the data to the file 
+                    worksheet.Cells[lastRow, 1] = idBox.Text;
                 worksheet.Cells[lastRow, 2] = userNameBox.Text;
                 worksheet.Cells[lastRow, 3] = passwordBox.Text;
 
