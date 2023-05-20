@@ -19,7 +19,7 @@ namespace BirdHouse
             // see https://aka.ms/applicationconfiguration.
 
             // before starting application , we check if Microsoft Excel is installed
-            // if not, the application can't start
+            // if not, the application can't start22
 
         
 
