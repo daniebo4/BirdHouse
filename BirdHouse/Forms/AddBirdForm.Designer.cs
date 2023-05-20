@@ -45,8 +45,8 @@ namespace BirdHouse.Forms
             hatchDateTimePicker = new DateTimePicker();
             kindComboBox = new ComboBox();
             subKindComboBox = new ComboBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            SexButton2 = new RadioButton();
+            SexButton = new RadioButton();
             SuspendLayout();
             // 
             // serialNumberBoxTextBox
@@ -189,37 +189,37 @@ namespace BirdHouse.Forms
             subKindComboBox.TabIndex = 19;
             subKindComboBox.SelectedIndexChanged += subKindComboBox_SelectedIndexChanged;
             // 
-            // radioButton1
+            // SexButton2
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(325, 340);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(122, 36);
-            radioButton1.TabIndex = 20;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Female";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            SexButton2.AutoSize = true;
+            SexButton2.Location = new Point(325, 340);
+            SexButton2.Name = "SexButton2";
+            SexButton2.Size = new Size(122, 36);
+            SexButton2.TabIndex = 20;
+            SexButton2.TabStop = true;
+            SexButton2.Text = "Female";
+            SexButton2.UseVisualStyleBackColor = true;
+            SexButton2.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // radioButton2
+            // SexButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(221, 340);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(98, 36);
-            radioButton2.TabIndex = 21;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Male";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            SexButton.AutoSize = true;
+            SexButton.Location = new Point(221, 340);
+            SexButton.Name = "SexButton";
+            SexButton.Size = new Size(98, 36);
+            SexButton.TabIndex = 21;
+            SexButton.TabStop = true;
+            SexButton.Text = "Male";
+            SexButton.UseVisualStyleBackColor = true;
+            SexButton.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // AddBirdForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 464);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(SexButton);
+            Controls.Add(SexButton2);
             Controls.Add(subKindComboBox);
             Controls.Add(kindComboBox);
             Controls.Add(hatchDateTimePicker);
@@ -263,7 +263,7 @@ namespace BirdHouse.Forms
         private ComboBox comboBox2;
         private ComboBox kindComboBox;
         private ComboBox subKindComboBox;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton SexButton2;
+        private RadioButton SexButton;
     }
 }

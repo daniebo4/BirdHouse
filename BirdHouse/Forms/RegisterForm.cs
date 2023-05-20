@@ -42,18 +42,21 @@ namespace BirdHouse
                 //bool containsCharacter = password.Contains(targetCharacter);
                 int counter = 0;
                 // add input check
-                if (username.Length<6 || username.Length > 8)
+                if (username.Length < 6 || username.Length > 8)
                 {
                     MessageBox.Show("Invalide username length! \nneed to be between 6 to 8 digits!");
                     return;
                 }
                 int lastRow = worksheet.UsedRange.Rows.Count + 1;
 
-                for (int i = 0; i < username.Length-1; i++) {
-                    if (username[i] >='0' && username[i] <= '9') {
+                for (int i = 0; i < username.Length - 1; i++)
+                {
+                    if (username[i] >= '0' && username[i] <= '9')
+                    {
                         counter++;
                     }
-                    if(!(username[i] >= 'a' && username[i] <= 'z' || username[i] >= 'A' && username[i] <= 'Z' || username[i] >= '0' && username[i] <= '9')){
+                    if (!(username[i] >= 'a' && username[i] <= 'z' || username[i] >= 'A' && username[i] <= 'Z' || username[i] >= '0' && username[i] <= '9'))
+                    {
                         MessageBox.Show("Invalide username! \nJust english letter are allow and numbers!");
                         return;
                     }
@@ -70,28 +73,28 @@ namespace BirdHouse
                     bool charFlag = false;
                     foreach (char c in password)
                     {
-                        
+
                         if (char.IsSymbol(c) || char.IsPunctuation(c))
-                            specialFlag=true;
-                           
-                        if(char.IsNumber(c))
+                            specialFlag = true;
+
+                        if (char.IsNumber(c))
                             numberFlag = true;
 
                         if (char.IsLetter(c))
                             charFlag = true;
 
-                    } 
-                    if (specialFlag ==false)
+                    }
+                    if (specialFlag == false)
                     {
                         MessageBox.Show("Invalide password! \nneed to containe at least 1 special character!");
                         return;
                     }
-                    if (numberFlag ==false)
+                    if (numberFlag == false)
                     {
                         MessageBox.Show("Invalide password! \nneed to containe at least 1 number!");
                         return;
                     }
-                    if(charFlag ==false)
+                    if (charFlag == false)
                     {
                         MessageBox.Show("Invalide password! \nneed to containe at least 1 letter!");
                         return;
@@ -122,8 +125,8 @@ namespace BirdHouse
                     MessageBox.Show("Invalide ID field is empty!");
                     return;
                 }
-                    // if input check passed , we can save the data to the file 
-                    worksheet.Cells[lastRow, 1] = idBox.Text;
+                // if input check passed , we can save the data to the file 
+                worksheet.Cells[lastRow, 1] = idBox.Text;
                 worksheet.Cells[lastRow, 2] = userNameBox.Text;
                 worksheet.Cells[lastRow, 3] = passwordBox.Text;
 
@@ -171,6 +174,11 @@ namespace BirdHouse
         }
 
         private void confirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterForm_Load_1(object sender, EventArgs e)
         {
 
         }

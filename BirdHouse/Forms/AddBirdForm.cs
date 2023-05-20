@@ -31,7 +31,7 @@ namespace BirdHouse.Forms
             if (kind == null)
             {
                 MessageBox.Show("Enter Species!");
-                            return;
+                return;
             }
 
             if (subKind == null)
@@ -40,13 +40,100 @@ namespace BirdHouse.Forms
                 return;
             }
             string? serialNumber = serialNumberBoxTextBox.Text;
+            if (serialNumber.Length > 0)
+            {
+                foreach (char c in serialNumber)
+                {
+
+                    if (!(char.IsNumber(c)))
+                    {
+                        MessageBox.Show("Invalide serial! \njust numbers allowed!");
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Serial!");
+                return;
+            }
+
             string? cageNumber = cageNumberTextBox.Text;
+            if (cageNumber.Length > 0)
+            {
+                foreach (char c in cageNumber)
+                {
+
+                    if (!(char.IsNumber(c) || char.IsLetter(c)))
+                    {
+                        MessageBox.Show("Invalide cageNumber! \njust numbers and letters allowed!");
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Cage Number!");
+                return;
+            }
             string? dadSerial = dadSerialTextBox.Text;
+            if (dadSerial.Length > 0)
+            {
+                foreach (char c in dadSerial)
+                {
+
+                    if (!(char.IsNumber(c)))
+                    {
+                        MessageBox.Show("Invalide Dad Serial! \njust numbers allowed!");
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Dad Serial!");
+                return;
+            }
             string? momSerial = momSerialTextBox.Text;
+            if (momSerial.Length > 0)
+            {
+                foreach (char c in momSerial)
+                {
+
+                    if (!(char.IsNumber(c)))
+                    {
+                        MessageBox.Show("Invalide Mom Serial! \njust numbers allowed!");
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Mom Serial!");
+                return;
+            }
             DateTime HatchDate = hatchDateTimePicker.Value;
-            string? sex = serialNumberBoxTextBox.Text;
-            Bird bird_test = new Bird(serialNumber, kind, subKind, HatchDate, sex, 
-                cageNumber, dadSerial, momSerial);
+            if (!(DateTime.TryParse(hatchDateTimePicker.Value.ToString(), out HatchDate)))
+            {
+                MessageBox.Show("Invalide Hatch Date! \npick Hatch Date!");
+                return;
+            }
+            string? sex;
+            if (SexButton.Checked)
+                sex = SexButton.Text;
+            else if (SexButton2.Checked)
+                sex = SexButton2.Text;
+            else
+            {
+                MessageBox.Show("Invalide Sex! \npick the bird Sex!");
+                return;
+            }
+                Bird bird_test = new Bird(serialNumber, kind, subKind, HatchDate, sex,
+                    cageNumber, dadSerial, momSerial);
 
 
         }

@@ -33,5 +33,12 @@ namespace BirdHouse
         {
 
         }
+
+        private void AddCageButton_Click(object sender, EventArgs e)
+        {
+            AddCageForm addCage = new AddCageForm();
+            addCage.Show();
+            
+        }
     }
 }
