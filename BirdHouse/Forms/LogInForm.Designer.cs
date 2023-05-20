@@ -28,101 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LogInButton = new System.Windows.Forms.Button();
-            this.passwordBox = new System.Windows.Forms.TextBox();
-            this.userNameBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.registerButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            LogInButton = new Button();
+            passwordBox = new TextBox();
+            userNameBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            registerButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // LogInButton
             // 
-            this.LogInButton.Location = new System.Drawing.Point(377, 338);
-            this.LogInButton.Margin = new System.Windows.Forms.Padding(4);
-            this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(134, 42);
-            this.LogInButton.TabIndex = 0;
-            this.LogInButton.Text = "Log In";
-            this.LogInButton.UseVisualStyleBackColor = true;
-            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click_1);
+            LogInButton.Location = new Point(408, 361);
+            LogInButton.Margin = new Padding(4);
+            LogInButton.Name = "LogInButton";
+            LogInButton.Size = new Size(145, 45);
+            LogInButton.TabIndex = 0;
+            LogInButton.Text = "Log In";
+            LogInButton.UseVisualStyleBackColor = true;
+            LogInButton.Click += LogInButton_Click_2;
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(377, 294);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(282, 35);
-            this.passwordBox.TabIndex = 1;
+            passwordBox.Location = new Point(408, 314);
+            passwordBox.Margin = new Padding(4);
+            passwordBox.Name = "passwordBox";
+            passwordBox.Size = new Size(305, 39);
+            passwordBox.TabIndex = 1;
             // 
             // userNameBox
             // 
-            this.userNameBox.Location = new System.Drawing.Point(377, 250);
-            this.userNameBox.Margin = new System.Windows.Forms.Padding(4);
-            this.userNameBox.Name = "userNameBox";
-            this.userNameBox.Size = new System.Drawing.Size(282, 35);
-            this.userNameBox.TabIndex = 2;
+            userNameBox.Location = new Point(408, 267);
+            userNameBox.Margin = new Padding(4);
+            userNameBox.Name = "userNameBox";
+            userNameBox.Size = new Size(305, 39);
+            userNameBox.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 257);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 30);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "User Name :";
+            label1.AutoSize = true;
+            label1.Location = new Point(260, 274);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(144, 32);
+            label1.TabIndex = 3;
+            label1.Text = "User Name :";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 301);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 30);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password : ";
+            label2.AutoSize = true;
+            label2.Location = new Point(269, 321);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(130, 32);
+            label2.TabIndex = 4;
+            label2.Text = "Password : ";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(210, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(596, 208);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Location = new Point(228, 15);
+            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(646, 222);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(518, 338);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(134, 42);
-            this.registerButton.TabIndex = 6;
-            this.registerButton.Text = "Register";
-            this.registerButton.UseVisualStyleBackColor = true;
+            registerButton.Location = new Point(561, 361);
+            registerButton.Margin = new Padding(4);
+            registerButton.Name = "registerButton";
+            registerButton.Size = new Size(145, 45);
+            registerButton.TabIndex = 6;
+            registerButton.Text = "Register";
+            registerButton.UseVisualStyleBackColor = true;
+            registerButton.Click += registerButton_Click_1;
             // 
             // LogInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 401);
-            this.Controls.Add(this.registerButton);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.userNameBox);
-            this.Controls.Add(this.passwordBox);
-            this.Controls.Add(this.LogInButton);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "LogInForm";
-            this.Text = "Log In";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1127, 428);
+            Controls.Add(registerButton);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(userNameBox);
+            Controls.Add(passwordBox);
+            Controls.Add(LogInButton);
+            Margin = new Padding(4);
+            Name = "LogInForm";
+            Text = "Log In";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

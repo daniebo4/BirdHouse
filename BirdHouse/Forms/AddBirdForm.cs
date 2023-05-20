@@ -26,8 +26,6 @@ namespace BirdHouse.Forms
         private void AddBirdButton_Click(object sender, EventArgs e)
         {
             string? serialNumber = serialNumberBoxTextBox.Text;
-            string? kind = kindTextBox.Text;
-            string? subKind = subKindTextBox.Text;
             string? cageNumber = cageNumberTextBox.Text;
             string? dadSerial = dadSerialTextBox.Text;
             string? momSerial = momSerialTextBox.Text;
