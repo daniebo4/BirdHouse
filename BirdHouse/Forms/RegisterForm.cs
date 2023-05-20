@@ -169,10 +169,5 @@ namespace BirdHouse
         {
 
         }
-
-        private void confirm_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
