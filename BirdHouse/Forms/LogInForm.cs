@@ -17,6 +17,43 @@ namespace BirdHouse
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+            // this line adds an event handler to detect this form closing
+            this.FormClosing += new FormClosingEventHandler(this.LogInForm_FormClosing);
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInForm_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            // this method is activated when the form is closed , it closes the excel file 
+            if (_workbook != null)
+            {
+                _excelService.CloseAll(_workbook);
+            }
+        }
+
+        private void LogInButton_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void registerButton_Click_1(object sender, EventArgs e)
+        {
+
+            RegisterForm registerForm = new RegisterForm(_excelService);
+            registerForm.Show();
+        }
+
+        private void LogInButton_Click_2(object sender, EventArgs e)
+        {
             // finding the path to the data file
             string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string filePath = projectPath + "\\users.xls";
@@ -46,33 +83,6 @@ namespace BirdHouse
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-        }
-
-        private void LogInForm_Load(object sender, EventArgs e)
-        {
-            // this line adds an event handler to detect this form closing
-            this.FormClosing += new FormClosingEventHandler(this.LogInForm_FormClosing);
-        }
-
-        private void registerButton_Click(object sender, EventArgs e)
-        {
-            RegisterForm registerForm = new RegisterForm(_excelService);
-            registerForm.Show();
-            
-        }
-
-        private void LogInForm_FormClosing(object? sender, FormClosingEventArgs e)
-        {
-            // this method is activated when the form is closed , it closes the excel file 
-            if (_workbook != null)
-            {
-                _excelService.CloseAll(_workbook);
-            }
-        }
-
-        private void LogInButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

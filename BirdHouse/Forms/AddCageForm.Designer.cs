@@ -29,135 +29,160 @@ namespace BirdHouse.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            LengthTextBox = new TextBox();
+            SerialNumberTextBox = new TextBox();
+            WidthTextBox = new TextBox();
+            HeightTextBox = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            AddCageButtonClick = new Button();
+            MaterialComboBox = new ComboBox();
+            SuspendLayout();
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 30);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Material:";
+            label3.AutoSize = true;
+            label3.Location = new Point(7, 56);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 15);
+            label3.TabIndex = 17;
+            label3.Text = "Material:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 30);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Size:";
+            label2.AutoSize = true;
+            label2.Location = new Point(13, 100);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(30, 15);
+            label2.TabIndex = 16;
+            label2.Text = "Size:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 30);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Serial number:";
+            label1.AutoSize = true;
+            label1.Location = new Point(7, 14);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 15);
+            label1.TabIndex = 15;
+            label1.Text = "Serial number:";
             // 
-            // textBox3
+            // LengthTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 35);
-            this.textBox3.TabIndex = 14;
+            LengthTextBox.Location = new Point(55, 97);
+            LengthTextBox.Margin = new Padding(2);
+            LengthTextBox.Name = "LengthTextBox";
+            LengthTextBox.Size = new Size(70, 23);
+            LengthTextBox.TabIndex = 13;
             // 
-            // textBox2
+            // SerialNumberTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 35);
-            this.textBox2.TabIndex = 13;
+            SerialNumberTextBox.Location = new Point(93, 12);
+            SerialNumberTextBox.Margin = new Padding(2);
+            SerialNumberTextBox.Name = "SerialNumberTextBox";
+            SerialNumberTextBox.Size = new Size(104, 23);
+            SerialNumberTextBox.TabIndex = 12;
+            SerialNumberTextBox.TextChanged += SerialNumberTextBox_TextChanged;
             // 
-            // textBox1
+            // WidthTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 35);
-            this.textBox1.TabIndex = 12;
+            WidthTextBox.Location = new Point(127, 97);
+            WidthTextBox.Margin = new Padding(2);
+            WidthTextBox.Name = "WidthTextBox";
+            WidthTextBox.Size = new Size(70, 23);
+            WidthTextBox.TabIndex = 18;
             // 
-            // textBox4
+            // HeightTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(218, 194);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 35);
-            this.textBox4.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(341, 194);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 35);
-            this.textBox5.TabIndex = 19;
+            HeightTextBox.Location = new Point(199, 97);
+            HeightTextBox.Margin = new Padding(2);
+            HeightTextBox.Name = "HeightTextBox";
+            HeightTextBox.Size = new Size(70, 23);
+            HeightTextBox.TabIndex = 19;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(124, 232);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 23);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Length";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlDarkDark;
+            label4.Location = new Point(72, 116);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(36, 12);
+            label4.TabIndex = 20;
+            label4.Text = "Length";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(245, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 23);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Width";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ControlDarkDark;
+            label5.Location = new Point(143, 116);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(31, 12);
+            label5.TabIndex = 21;
+            label5.Text = "Width";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(369, 232);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 23);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Height";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlDarkDark;
+            label6.Location = new Point(215, 116);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(34, 12);
+            label6.TabIndex = 22;
+            label6.Text = "Height";
+            // 
+            // AddCageButtonClick
+            // 
+            AddCageButtonClick.Location = new Point(122, 169);
+            AddCageButtonClick.Name = "AddCageButtonClick";
+            AddCageButtonClick.Size = new Size(75, 23);
+            AddCageButtonClick.TabIndex = 23;
+            AddCageButtonClick.Text = "Add Cage";
+            AddCageButtonClick.UseVisualStyleBackColor = true;
+            AddCageButtonClick.Click += button1_Click;
+            // 
+            // MaterialComboBox
+            // 
+            MaterialComboBox.FormattingEnabled = true;
+            MaterialComboBox.Location = new Point(93, 53);
+            MaterialComboBox.Name = "MaterialComboBox";
+            MaterialComboBox.Size = new Size(121, 23);
+            MaterialComboBox.TabIndex = 24;
             // 
             // AddCageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 450);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "AddCageForm";
-            this.Text = "AddCageForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(321, 225);
+            Controls.Add(MaterialComboBox);
+            Controls.Add(AddCageButtonClick);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(HeightTextBox);
+            Controls.Add(WidthTextBox);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(LengthTextBox);
+            Controls.Add(SerialNumberTextBox);
+            Margin = new Padding(2);
+            Name = "AddCageForm";
+            Text = "AddCageForm";
+            Load += AddCageForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -165,13 +190,14 @@ namespace BirdHouse.Forms
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox LengthTextBox;
+        private TextBox SerialNumberTextBox;
+        private TextBox WidthTextBox;
+        private TextBox HeightTextBox;
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button AddCageButtonClick;
+        private ComboBox MaterialComboBox;
     }
 }

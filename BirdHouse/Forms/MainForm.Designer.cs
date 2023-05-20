@@ -28,114 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            button1 = new Button();
+            button2 = new Button();
+            textBox1 = new TextBox();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            label1 = new Label();
+            AddCageButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 438);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add bird";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(7, 219);
+            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(78, 21);
+            button1.TabIndex = 0;
+            button1.Text = "Add bird";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(16, 94);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(9, 47);
+            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(78, 21);
+            button2.TabIndex = 1;
+            button2.Text = "Search";
+            button2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 35);
-            this.textBox1.TabIndex = 2;
+            textBox1.Location = new Point(8, 3);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(157, 23);
+            textBox1.TabIndex = 2;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 72;
-            this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(936, 292);
-            this.dataGridView1.TabIndex = 3;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(7, 71);
+            dataGridView1.Margin = new Padding(2, 1, 2, 1);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 72;
+            dataGridView1.RowTemplate.Height = 37;
+            dataGridView1.Size = new Size(546, 146);
+            dataGridView1.TabIndex = 3;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(264, 38);
-            this.comboBox1.TabIndex = 4;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(9, 24);
+            comboBox1.Margin = new Padding(2, 1, 2, 1);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(156, 23);
+            comboBox1.TabIndex = 4;
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(288, 8);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 34);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Birds";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(168, 4);
+            radioButton1.Margin = new Padding(2, 1, 2, 1);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(51, 19);
+            radioButton1.TabIndex = 5;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Birds";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(377, 8);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 34);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cages";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(220, 4);
+            radioButton2.Margin = new Padding(2, 1, 2, 1);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(57, 19);
+            radioButton2.TabIndex = 6;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Cages";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(285, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 30);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Search Filter";
+            label1.AutoSize = true;
+            label1.Location = new Point(166, 26);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Search Filter";
+            // 
+            // AddCageButton
+            // 
+            AddCageButton.Location = new Point(99, 219);
+            AddCageButton.Name = "AddCageButton";
+            AddCageButton.Size = new Size(75, 23);
+            AddCageButton.TabIndex = 8;
+            AddCageButton.Text = "Add Cage";
+            AddCageButton.UseVisualStyleBackColor = true;
+            AddCageButton.Click += AddCageButton_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 495);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "MainForm";
-            this.Text = "Main";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(560, 248);
+            Controls.Add(AddCageButton);
+            Controls.Add(label1);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
+            Controls.Add(comboBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(textBox1);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "MainForm";
+            Text = "Main";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -148,5 +166,6 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Label label1;
+        private Button AddCageButton;
     }
 }

@@ -11,10 +11,10 @@ namespace BirdHouse
     internal class Cage
     {
         private String serial;
-        int length, width, height;
-        private Material material;
+        string length, width, height;
+        private string material;
 
-        public Cage(string serial, int length, int width, int height, Material material)
+        public Cage(string serial, string length, string width, string height, string material)
         {
             this.serial = serial;
             this.length = length;   
@@ -27,22 +27,22 @@ namespace BirdHouse
             get { return serial; }
             set { serial = value; }
         }
-        public int Length
+        public string Length
         {
             get { return length; }
             set { length = value; }
         }
-        public int Width
+        public string Width
         {
             get { return width; }
             set { width = value; }
         }
-        public int Height
+        public string Height
         {
             get { return height; }
             set { height = value; }
         }
-        public Material Material
+        public string Material
         {
             get { return material; }
             set { material = value; }

@@ -29,197 +29,218 @@ namespace BirdHouse.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.serialNumberBoxTextBox = new System.Windows.Forms.TextBox();
-            this.cageNumberTextBox = new System.Windows.Forms.TextBox();
-            this.dadSerialTextBox = new System.Windows.Forms.TextBox();
-            this.momSerialTextBox = new System.Windows.Forms.TextBox();
-            this.sexTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AddBirdButton = new System.Windows.Forms.Button();
-            this.hatchDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.kindComboBox = new System.Windows.Forms.ComboBox();
-            this.subKindComboBox = new System.Windows.Forms.ComboBox();
-            this.SuspendLayout();
+            serialNumberBoxTextBox = new TextBox();
+            cageNumberTextBox = new TextBox();
+            dadSerialTextBox = new TextBox();
+            momSerialTextBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            AddBirdButton = new Button();
+            hatchDateTimePicker = new DateTimePicker();
+            kindComboBox = new ComboBox();
+            subKindComboBox = new ComboBox();
+            SexButton2 = new RadioButton();
+            SexButton = new RadioButton();
+            SuspendLayout();
             // 
             // serialNumberBoxTextBox
             // 
-            this.serialNumberBoxTextBox.Location = new System.Drawing.Point(204, 31);
-            this.serialNumberBoxTextBox.Name = "serialNumberBoxTextBox";
-            this.serialNumberBoxTextBox.Size = new System.Drawing.Size(175, 35);
-            this.serialNumberBoxTextBox.TabIndex = 0;
+            serialNumberBoxTextBox.Location = new Point(221, 33);
+            serialNumberBoxTextBox.Name = "serialNumberBoxTextBox";
+            serialNumberBoxTextBox.Size = new Size(189, 39);
+            serialNumberBoxTextBox.TabIndex = 0;
+            serialNumberBoxTextBox.TextChanged += serialNumberBoxTextBox_TextChanged;
             // 
             // cageNumberTextBox
             // 
-            this.cageNumberTextBox.Location = new System.Drawing.Point(204, 154);
-            this.cageNumberTextBox.Name = "cageNumberTextBox";
-            this.cageNumberTextBox.Size = new System.Drawing.Size(175, 35);
-            this.cageNumberTextBox.TabIndex = 3;
+            cageNumberTextBox.Location = new Point(221, 164);
+            cageNumberTextBox.Name = "cageNumberTextBox";
+            cageNumberTextBox.Size = new Size(189, 39);
+            cageNumberTextBox.TabIndex = 3;
             // 
             // dadSerialTextBox
             // 
-            this.dadSerialTextBox.Location = new System.Drawing.Point(204, 195);
-            this.dadSerialTextBox.Name = "dadSerialTextBox";
-            this.dadSerialTextBox.Size = new System.Drawing.Size(175, 35);
-            this.dadSerialTextBox.TabIndex = 4;
+            dadSerialTextBox.Location = new Point(221, 208);
+            dadSerialTextBox.Name = "dadSerialTextBox";
+            dadSerialTextBox.Size = new Size(189, 39);
+            dadSerialTextBox.TabIndex = 4;
             // 
             // momSerialTextBox
             // 
-            this.momSerialTextBox.Location = new System.Drawing.Point(204, 236);
-            this.momSerialTextBox.Name = "momSerialTextBox";
-            this.momSerialTextBox.Size = new System.Drawing.Size(175, 35);
-            this.momSerialTextBox.TabIndex = 5;
-            // 
-            // sexTextBox
-            // 
-            this.sexTextBox.Location = new System.Drawing.Point(204, 318);
-            this.sexTextBox.Name = "sexTextBox";
-            this.sexTextBox.Size = new System.Drawing.Size(175, 35);
-            this.sexTextBox.TabIndex = 7;
+            momSerialTextBox.Location = new Point(221, 252);
+            momSerialTextBox.Name = "momSerialTextBox";
+            momSerialTextBox.Size = new Size(189, 39);
+            momSerialTextBox.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 30);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Serial number:";
+            label1.AutoSize = true;
+            label1.Location = new Point(56, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(168, 32);
+            label1.TabIndex = 8;
+            label1.Text = "Serial number:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 30);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Kind: ";
+            label2.AutoSize = true;
+            label2.Location = new Point(144, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 32);
+            label2.TabIndex = 9;
+            label2.Text = "Kind: ";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 30);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Sub kind:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            label3.AutoSize = true;
+            label3.Location = new Point(108, 126);
+            label3.Name = "label3";
+            label3.Size = new Size(113, 32);
+            label3.TabIndex = 11;
+            label3.Text = "Sub kind:";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 159);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 30);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Cage number:";
+            label4.AutoSize = true;
+            label4.Location = new Point(56, 170);
+            label4.Name = "label4";
+            label4.Size = new Size(164, 32);
+            label4.TabIndex = 10;
+            label4.Text = "Cage number:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 30);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Dad serial number:";
+            label5.AutoSize = true;
+            label5.Location = new Point(11, 213);
+            label5.Name = "label5";
+            label5.Size = new Size(215, 32);
+            label5.TabIndex = 15;
+            label5.Text = "Dad serial number:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 30);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "mom serial number:";
+            label6.AutoSize = true;
+            label6.Location = new Point(11, 257);
+            label6.Name = "label6";
+            label6.Size = new Size(228, 32);
+            label6.TabIndex = 14;
+            label6.Text = "mom serial number:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 282);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 30);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Hatch Date:";
+            label7.AutoSize = true;
+            label7.Location = new Point(78, 301);
+            label7.Name = "label7";
+            label7.Size = new Size(138, 32);
+            label7.TabIndex = 13;
+            label7.Text = "Hatch Date:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(139, 323);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 30);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Sex :";
+            label8.AutoSize = true;
+            label8.Location = new Point(151, 345);
+            label8.Name = "label8";
+            label8.Size = new Size(63, 32);
+            label8.TabIndex = 12;
+            label8.Text = "Sex :";
             // 
             // AddBirdButton
             // 
-            this.AddBirdButton.Location = new System.Drawing.Point(204, 359);
-            this.AddBirdButton.Name = "AddBirdButton";
-            this.AddBirdButton.Size = new System.Drawing.Size(131, 40);
-            this.AddBirdButton.TabIndex = 16;
-            this.AddBirdButton.Text = "AddBird";
-            this.AddBirdButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.AddBirdButton.UseVisualStyleBackColor = true;
-            this.AddBirdButton.Click += new System.EventHandler(this.AddBirdButton_Click);
+            AddBirdButton.Location = new Point(221, 383);
+            AddBirdButton.Name = "AddBirdButton";
+            AddBirdButton.Size = new Size(142, 43);
+            AddBirdButton.TabIndex = 16;
+            AddBirdButton.Text = "AddBird";
+            AddBirdButton.TextAlign = ContentAlignment.BottomCenter;
+            AddBirdButton.UseVisualStyleBackColor = true;
+            AddBirdButton.Click += AddBirdButton_Click;
             // 
             // hatchDateTimePicker
             // 
-            this.hatchDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.hatchDateTimePicker.Location = new System.Drawing.Point(201, 277);
-            this.hatchDateTimePicker.Name = "hatchDateTimePicker";
-            this.hatchDateTimePicker.Size = new System.Drawing.Size(178, 35);
-            this.hatchDateTimePicker.TabIndex = 17;
+            hatchDateTimePicker.Format = DateTimePickerFormat.Short;
+            hatchDateTimePicker.Location = new Point(218, 295);
+            hatchDateTimePicker.Name = "hatchDateTimePicker";
+            hatchDateTimePicker.Size = new Size(192, 39);
+            hatchDateTimePicker.TabIndex = 17;
+            hatchDateTimePicker.ValueChanged += hatchDateTimePicker_ValueChanged;
             // 
             // kindComboBox
             // 
-            this.kindComboBox.FormattingEnabled = true;
-            this.kindComboBox.Location = new System.Drawing.Point(204, 72);
-            this.kindComboBox.Name = "kindComboBox";
-            this.kindComboBox.Size = new System.Drawing.Size(175, 38);
-            this.kindComboBox.TabIndex = 18;
-            this.kindComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            kindComboBox.FormattingEnabled = true;
+            kindComboBox.Location = new Point(221, 77);
+            kindComboBox.Name = "kindComboBox";
+            kindComboBox.Size = new Size(189, 40);
+            kindComboBox.TabIndex = 18;
+            kindComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // subKindComboBox
             // 
-            this.subKindComboBox.FormattingEnabled = true;
-            this.subKindComboBox.Location = new System.Drawing.Point(204, 115);
-            this.subKindComboBox.Name = "subKindComboBox";
-            this.subKindComboBox.Size = new System.Drawing.Size(175, 38);
-            this.subKindComboBox.TabIndex = 19;
+            subKindComboBox.FormattingEnabled = true;
+            subKindComboBox.Location = new Point(221, 123);
+            subKindComboBox.Name = "subKindComboBox";
+            subKindComboBox.Size = new Size(189, 40);
+            subKindComboBox.TabIndex = 19;
+            subKindComboBox.SelectedIndexChanged += subKindComboBox_SelectedIndexChanged;
+            // 
+            // SexButton2
+            // 
+            SexButton2.AutoSize = true;
+            SexButton2.Location = new Point(325, 340);
+            SexButton2.Name = "SexButton2";
+            SexButton2.Size = new Size(122, 36);
+            SexButton2.TabIndex = 20;
+            SexButton2.TabStop = true;
+            SexButton2.Text = "Female";
+            SexButton2.UseVisualStyleBackColor = true;
+            SexButton2.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // SexButton
+            // 
+            SexButton.AutoSize = true;
+            SexButton.Location = new Point(221, 340);
+            SexButton.Name = "SexButton";
+            SexButton.Size = new Size(98, 36);
+            SexButton.TabIndex = 21;
+            SexButton.TabStop = true;
+            SexButton.Text = "Male";
+            SexButton.UseVisualStyleBackColor = true;
+            SexButton.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // AddBirdForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 435);
-            this.Controls.Add(this.subKindComboBox);
-            this.Controls.Add(this.kindComboBox);
-            this.Controls.Add(this.hatchDateTimePicker);
-            this.Controls.Add(this.AddBirdButton);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.sexTextBox);
-            this.Controls.Add(this.momSerialTextBox);
-            this.Controls.Add(this.dadSerialTextBox);
-            this.Controls.Add(this.cageNumberTextBox);
-            this.Controls.Add(this.serialNumberBoxTextBox);
-            this.Name = "AddBirdForm";
-            this.Text = "AddBirdForm";
-            this.Load += new System.EventHandler(this.AddBirdForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(540, 464);
+            Controls.Add(SexButton);
+            Controls.Add(SexButton2);
+            Controls.Add(subKindComboBox);
+            Controls.Add(kindComboBox);
+            Controls.Add(hatchDateTimePicker);
+            Controls.Add(AddBirdButton);
+            Controls.Add(label5);
+            Controls.Add(label6);
+            Controls.Add(label7);
+            Controls.Add(label8);
+            Controls.Add(label3);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(momSerialTextBox);
+            Controls.Add(dadSerialTextBox);
+            Controls.Add(cageNumberTextBox);
+            Controls.Add(serialNumberBoxTextBox);
+            Name = "AddBirdForm";
+            Text = "AddBirdForm";
+            Load += AddBirdForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -228,7 +249,6 @@ namespace BirdHouse.Forms
         private TextBox cageNumberTextBox;
         private TextBox dadSerialTextBox;
         private TextBox momSerialTextBox;
-        private TextBox sexTextBox;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -243,5 +263,7 @@ namespace BirdHouse.Forms
         private ComboBox comboBox2;
         private ComboBox kindComboBox;
         private ComboBox subKindComboBox;
+        private RadioButton SexButton2;
+        private RadioButton SexButton;
     }
 }
