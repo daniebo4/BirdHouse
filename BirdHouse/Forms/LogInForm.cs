@@ -70,6 +70,10 @@ namespace BirdHouse
             }
         }
 
+        private void LogInButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

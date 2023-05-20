@@ -21,9 +21,6 @@ namespace BirdHouse
             // before starting application , we check if Microsoft Excel is installed
             // if not, the application can't start
 
-
-            Form2 form2 = new AddB();  // Replace "Form2" with the name of the form you want to open
-            form2.Show();  // Use form2.ShowDialog() if you want to open the form as a modal dialog
         
 
         xlApp = new Microsoft.Office.Interop.Excel.Application();
