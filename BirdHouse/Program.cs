@@ -19,8 +19,11 @@ namespace BirdHouse
             // see https://aka.ms/applicationconfiguration.
 
             // before starting application , we check if Microsoft Excel is installed
-            // if not, the application can't start
-            xlApp = new Microsoft.Office.Interop.Excel.Application();
+            // if not, the application can't start22
+
+        
+
+        xlApp = new Microsoft.Office.Interop.Excel.Application();
             if (xlApp == null)
             {
                 MessageBox.Show("Excel is not properly installed!!");
@@ -35,6 +38,9 @@ namespace BirdHouse
                 ApplicationConfiguration.Initialize();
                 Application.Run(new LogInForm(new UsersExcel()));
             }
+            
+
+            
 
 
 
