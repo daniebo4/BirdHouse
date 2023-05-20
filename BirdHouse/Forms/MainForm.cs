@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BirdHouse.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,17 @@ namespace BirdHouse
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddBirdForm addBird = new AddBirdForm();
+            addBird.Show();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
